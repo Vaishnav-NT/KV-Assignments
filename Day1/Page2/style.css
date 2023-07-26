@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+}
+
+
+aside {
+    height: 100vh;
+    width: 15vw;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 220px;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li { 
+    background-color: #03AEEE;
+    height: 50px;
+    width: 100%;
+    margin-left: 16px;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+a > img {
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 5px;
+    
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    background-color: #efefef;
+    width: 85vw;
+    height: 100vh;
+}
+
+.empty-div {
+    height: 65px;
+    margin-bottom: 24px;
+    background-color: white;
+}
+
+.card {
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #efefef;
+    box-shadow: #efefef;
+}
+
+.form-inputs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-div {
+    width: 32%;
+    margin: 16px 8px;
+}
+
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    border-radius: 6px;
+}
+
+.form-buttons {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.submit-button {
+    width: 150px;
+    height: 35px;
+    color: white;
+    background-color: #03AEEE;
+    border: 1px solid #03AEEE;
+    font-size: 90%;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+
+.cancel-button {
+    width: 150px;
+    height: 35px;
+    color: darkgrey;
+    font-weight: 500;
+    font-size: 90%;
+    background-color: white;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+}
+
