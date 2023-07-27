@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+        padding: 24px;
+        margin: 24px;
+       }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <h1 id="date-heading"></h1>
+        <button class="update" onclick="updateTime()">Update</button>
+    </div>
+</body>
+<script>
+    let time = Date.now();
+    document.getElementById("date-heading").innerHTML = time
+    
+    function updateTime() {
+        document.getElementById("date-heading").innerHTML = Date.now();
+    }
+</script>
+</html>

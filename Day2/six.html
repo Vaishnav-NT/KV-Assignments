@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #div1:hover {
+            background-color: red;
+        }
+
+        .square {
+            background-color: black;
+            width: 200px;
+            height: 200px;
+            margin: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "div1" class="square"></div>
+    <div id="div2" class="square" onmouseenter="changeColor()" onmouseleave="revertColor()"></div>   
+</body>
+<script>
+    function changeColor() {
+        div = document.getElementById("div2")
+        div.style.background = "blue";
+    }
+
+    function revertColor() {
+        div = document.getElementById("div2")
+        div.style.background = "black";
+    }
+</script>
+</html>
