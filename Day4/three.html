@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Promise</title>
+</head>
+<body>
+<button id="fetch_data" onclick="getHouses()">Fetch data</button>
+<div id="house_list"></div>
+</body>
+<script>
+/**
+* Refer API Documentation https://anapioficeandfire.com/Documentation
+* Fetch the details of various houses in the Game of thrones universe
+*
+* Challenge 1
+* Fetch and list down the names of the houses when the user clicks on 'Fetch data' button
+*
+* Challenge 2
+* Improve the result of challenge 1 by grouping the houses based on region
+* *Hint* use promise chaining
+*/
+let url = "https://www.anapioficeandfire.com/api/houses";
+
+function getHouses() {
+  fetch(url).then(
+    (data) => data.json()
+  ).then(
+        (data) => {
+            groupings = {};
+            
+            data.forEach((item) => {
+                if(item.region in groupings) {
+                    groupings[item.region].push(item.name);
+                }
+                else {
+                    groupings[item.region] = [];
+                    groupings[item.region].push(item.name);
+                }
+            })
+            
+            list = ""
+            for(const group in groupings) {
+                listItems = groupings[group];
+                newlistItems = listItems.map((item) => `<li>${item}</li>`);
+                list = `<h2>${group}</h2><ul>${newlistItems.join("")}</ul>`
+                document.getElementById("house_list").innerHTML = document.getElementById("house_list").innerHTML+list;
+            }
+        }
+    );
+    
+}
+</script>
+</html>
